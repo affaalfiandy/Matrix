@@ -1,0 +1,16 @@
+x = int(input("Masukkan jumlah baris: "))
+y = int(input("Masukkan jumlah kolom: "))
+matriks = [0]*x
+for i in range(x):
+    matriks[i] = [0]*y
+for i in range(x):
+    for j in range(y):
+        new = int(input(f'Nilai baris ke {i+1} kolom {j+1} '))
+        matriks[i][j]=new
+        
+mathasil = [0]*x
+for i in range(x):
+  mathasil[i] = [0]*y
+for i in range(len(matriks)):
+  for j in range(len(matriks[0])):
+    mathasil[j][i] = matriks[i][j]
