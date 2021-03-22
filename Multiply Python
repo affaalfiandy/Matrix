@@ -1,0 +1,38 @@
+x = int(input("Masukkan jumlah baris: "))
+y = int(input("Masukkan jumlah kolom: "))
+matriks1 = [0]*x
+for i in range(x):
+    matriks1[i] = [0]*y
+for i in range(x):
+    for j in range(y):
+        new = int(input(f'Nilai baris ke {i+1} kolom {j+1} '))
+        matriks1[i][j]=new
+
+x = int(input("Masukkan jumlah baris: "))
+y = int(input("Masukkan jumlah kolom: "))
+matriks2 = [0]*x
+for i in range(x):
+  matriks2[i] = [0]*y
+  for i in range(x):
+    for j in range(y):
+      new = int(input(f'Nilai baris ke {i+1} kolom {j+1} '))
+      matriks2[i][j]=new
+      
+mathasil = [0]*x
+for i in range(x):
+  mathasil[i] = [0]*y
+  
+hasil=[]
+  for i in range(len(matriks1)):
+    for j in range(len(matriks1[0])):
+      jum = 0
+      for k in range(len(matriks1)):
+        jum = jum + (matriks1[i][k] * matriks2[k][j])
+        if k == len(matriks1)-1:
+          hasil.append(jum)
+a= 0
+for i in range(len(matriks1)):
+  for j in range(len(matriks1[0])):
+    mathasil[i][j]=hasil[a]
+    a+= 1
+
